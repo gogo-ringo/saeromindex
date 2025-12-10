@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Saerom Kim</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            padding: 32px;        /* ✅ 상단 = 좌측 = 같은 값, 확 줄임 */
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 400;
+            margin-bottom: 36px;
+            padding-left: 72px;  /* ✅ 탭 간격 ⅓ 수준으로 축소 */
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .project-item {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 400;
+            display: flex;
+            line-height: 1.2;
+        }
+
+        .project-number {
+            display: inline-block;
+            min-width: 72px;     /* ✅ 01. ↔ Project 간격 ⅓로 축소 */
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 24px;   /* ✅ 모바일도 상단/좌측 동일 */
+            }
+
+            h1 {
+                margin-bottom: 28px;
+                padding-left: 56px;
+            }
+
+            .project-number {
+                min-width: 56px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Saerom Kim</h1>
+
+    <div class="projects">
+        <div class="project-item">
+            <span class="project-number">01.</span>
+            <a href="https://webzine-jade.vercel.app/">Project 1</a>
+        </div>
+
+        <div class="project-item">
+            <span class="project-number">02.</span>
+            <a href="https://archive-eta-three.vercel.app/">Project 2</a>
+        </div>
+
+        <div class="project-item">
+            <span class="project-number">03.</span>
+            <a href="https://tool-7n7mxcu6n-saerom-kims-projects.vercel.app/">Project 3</a>
+        </div>
+    </div>
+</body>
+</html>
